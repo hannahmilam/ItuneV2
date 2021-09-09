@@ -1,0 +1,15 @@
+body{
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+.header-img{
+  background-image: url("https://www.desicomments.com/wp-content/uploads/2017/04/Music-image.jpg");
+  background-size: cover;
+}
+.custom-shadow{
+  box-shadow: 0px 0px 5px #0059ff9c;
+}
+
+.custom-bg{
+background-color: #0c4f699c;
+}
+

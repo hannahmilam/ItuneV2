@@ -11,8 +11,8 @@ export default class Song {
 
   get Template() {
     return /*html*/`
-      <div class = "row card">
-        <div class="card-header justify-content-between d-flex ">
+      <div class = "row card mb-3 custom-shadow">
+        <div class="card-header">
           <img src="${this.albumArt}" height="75px">
           <div>
           <h5>${this.title}</h5>
@@ -20,8 +20,9 @@ export default class Song {
           </div>
           <button class="btn btn-success py-0 my-3" onclick="app.songsController.addSong('${this.id}')">$${this.price}</button>
         </div>
-        <div class="align-self-center card-footer bg-white m-0 p-0">
-            <audio src="${this.preview}" controls></audio>
+        <div class="card-footer bg-white">
+            <audio src="${this.preview}"></audio><span class=
+            selectable>⏯</span>
         </div>
       </div>
         `;
@@ -29,17 +30,17 @@ export default class Song {
 
   get playlistTemplate() {
     return /*html*/`
-    <div class = "card mx-3">
-      <div class="card-header justify-content-between d-flex">
+    <div class = "card mb-3 custom-shadow">
+      <div class="card-header">
         <img src="${this.albumArt}" height="75px">
         <div>
         <h5>${this.title}</h5>
         <p>${this.artist} - ${this.album}</p>
         </div>
-        <button class="btn btn-danger py-0 my-3" onclick="app.songsController.removeSong('${this.id}')">Remove</button>
+        <button class="btn btn-danger" onclick="app.songsController.removeSong('${this.id}')">Remove</button>
       </div>
-      <div class="align-self-center card-footer bg-white mb-3 p-0">
-          <audio src="${this.preview}" controls></audio>
+      <div class="card-footer bg-white">
+          <audio src="${this.preview}"></audio><span class="selectable">⏯</span>
       </div>
   </div>
         `;
