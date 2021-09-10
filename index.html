@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +32,7 @@
   </header>
   <main class="container-fluid">
     <section class="row">
+      <!-- SEARCH FOR MUSIC COLUMN -->
       <div class="col-3 bg-dark py-3">
         <div>
           <form onsubmit="app.songsController.search(event)">
@@ -45,46 +47,67 @@
           <!-- template to generate -->
         </div>
       </div>
-      <div class="col-6" id="preview">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+      <!-- FIRST SET OF CAROUSEL IMAGES -->
+      <div class="col-6 rounded">
+        <div id="carouselExampleIndicators" class="carousel slide my-3" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
               aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
               aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
               aria-label="Slide 3"></button>
           </div>
-          <div class="carousel-inner mt-3">
-            <div class="carousel-item active" data-bs-interval="3000">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <img
-                src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG11c2ljfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                class="d-block img-fluid rounded" alt="...">
+                src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="d-block w-100 rounded shadow" alt="...">
             </div>
-
-            <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fG11c2ljfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                class="d-block img-fluid rounded" alt="...">
+                src="https://images.unsplash.com/photo-1520170975578-25bd5217bf3d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJhbmRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="d-block w-100 rounded shadow" alt="...">
             </div>
-
-            <div class="carousel-item active" data-bs-interval="3000">
+            <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1433622070098-754fdf81c929?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fG11c2ljfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                class="d-block img-fluid rounded" alt="...">
+                src="https://images.unsplash.com/photo-1592586287005-bf6a9d63a9a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGJhbmRzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                class="d-block w-100 rounded shadow" alt="...">
             </div>
           </div>
-          <!-- Preview goes here -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
+        <div class="card custom-shadow custom-bg">
+          <div class="card-body  rounded">
+            <img src="https://eolahillswinery.com/wp-content/uploads/2018/09/EH-Summer-Concert-email-ad-500x190.jpg"
+              class="rounded ms-3" height="200px" alt="">
+          </div>
+        </div>
+
       </div>
+
+      <!-- MY PLAYLIST COLUMN -->
       <div class="col-3 custom-bg">
         <h3 class="text-center">Playlist</h3>
         <div class="col-12 m-0" id="playlist">
           <!-- template for playlist -->
         </div>
       </div>
+
     </section>
   </main>
+
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
       <div class="col">
@@ -97,6 +120,9 @@
     integrity="sha256-XmdRbTre/3RulhYk/cOBUMpYlaAp2Rpo/s556u0OIKk=" crossorigin="anonymous"></script>
   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
   <script src="app/main.js" type="module"></script>
 </body>
 

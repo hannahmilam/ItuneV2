@@ -21,8 +21,8 @@ export default class Song {
           <button class="btn btn-success py-0 my-3" onclick="app.songsController.addSong('${this.id}')">$${this.price}</button>
         </div>
         <div class="card-footer bg-white">
-            <audio src="${this.preview}"></audio><span class=
-            selectable>⏯</span>
+            <audio src="${this.preview}" id="audio" controls style="width: 100px"></audio>
+            
         </div>
       </div>
         `;
@@ -40,7 +40,8 @@ export default class Song {
         <button class="btn btn-danger" onclick="app.songsController.removeSong('${this.id}')">Remove</button>
       </div>
       <div class="card-footer bg-white">
-          <audio src="${this.preview}"></audio><span class="selectable">⏯</span>
+          <audio src="${this.preview}" id="audio" controls style="width: 100px"></audio>
+  <!-- <button onclick="app.audioController.togglePlay()">⏯</button> -->
       </div>
   </div>
         `;
